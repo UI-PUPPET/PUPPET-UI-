@@ -1,0 +1,48 @@
+local AutoFarm = {}
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Workspace = game:GetService("Workspace")
+
+_G.AutoFarm = false
+
+--------------------------------------------------
+local function topos(pos)
+    LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end
+
+local function CheckQuest()
+    -- simplified placeholder – replace with your own
+    -- returns Mon, CFrameQuest, CFrameMon
+    return "Bandit", CFrame.new(1059, 15, 1550), CFrame.new(1045, 27, 1560)
+end
+------------------------------------------------------------------
+
+function AutoFarm.Start()
+    _G.AutoFarm = true
+    task.spawn(function()
+        while _G.AutoFarm and task.wait() do
+            local Mon, QuestPos, MonPos = CheckQuest()
+            if LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+                topos(QuestPos)
+                ReplicatedStorage.Remotes.CommF_:InvokeServer("StartQuest", "BanditQuest1", 1)
+            else
+                local enemy = Workspace.Enemies:FindFirstChild(Mon)
+                if enemy and enemy:FindFirstChild("HumanoidRootPart") and enemy.Humanoid.Health > 0 then
+                    repeat
+                        topos(enemy.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0))
+                        task.wait()
+                    until not enemy.Parent or enemy.Humanoid.Health <= 0 or not _G.AutoFarm
+                else
+                    topos(MonPos)
+                end
+            end
+        end
+    end)
+end
+
+function AutoFarm.Stop()
+    _G.AutoFarm = false
+end
+
+return AutoFarm
