@@ -1,6 +1,6 @@
 
 local Eeee = function()
-    if local_ == 'Obfuscated Using KungFuscator' then
+    if local_ == 'Obfuscated Using florida' then
         local A = 'fake_constants'
     else
         return print('Tamper Detected')
@@ -13,7 +13,7 @@ end
 
 -- NOTE: You may see some bluesecure similarities here but no this is not a bluesec fork.
 
-function KungFuscator_Encode_Algorithm(string)
+function florida_Encode_Algorithm(string)
     local encodedString = ""
     for i = 1, #string do
         local char = string:sub(i,i)
