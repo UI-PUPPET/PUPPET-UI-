@@ -1,7 +1,7 @@
 -- Load SCP Hub
-        local Games  = {
+local Games  = {
     [3101667897] = "https://raw.githubusercontent.com/UI-PUPPET/PUPPET-UI-/refs/heads/main/legend%20of%20speed.lua", -- Legends of Speed
-    [3623096087] = "https://raw.githubusercontent.com/UI-PUPPET/PUPPET-UI-/refs/heads/main/SCP.lua",       -- Muscle Legends
+    [3623096087] = "https://raw.githubusercontent.com/UI-PUPPET/PUPPET-UI-/refs/heads/main/muscle%20legend.lua",       -- Muscle Legends
     [         ] = "https://raw.githubusercontent.com/UI-PUPPET/PUPPET-UI-/refs/heads/main/race%20clicker.lua", -- race clicker 
 }
 
