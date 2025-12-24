@@ -1,4 +1,1 @@
-local names = {
-    "Moha194xxx",
-    "mohaopxd2"
-}
+Moha194xxx
