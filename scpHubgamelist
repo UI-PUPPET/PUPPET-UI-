@@ -5,6 +5,7 @@ local Games  = {
     [9285238704] = "https://raw.githubusercontent.com/UI-PUPPET/PUPPET-UI-/refs/heads/main/race%20clicker.lua", -- race clicker 
     [286090429] = "https://raw.githubusercontent.com/UI-PUPPET/PUPPET-UI-/refs/heads/main/SCParsenal.lua", -- arsenal
     [118614517739521] = "https://raw.githubusercontent.com/UI-PUPPET/PUPPET-UI-/refs/heads/main/BLIND%20SHOT.lua", -- blind shot 
+    [136801880565837] = "https://raw.githubusercontent.com/UI-PUPPET/PUPPET-UI-/refs/heads/main/Flick.lua", -- flick 
 }
 
 return Games
